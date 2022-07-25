@@ -1,0 +1,29 @@
+.footer {
+  width: 100%;
+  border-top: 1px solid #ccc;
+  &-content {
+    @include main-wapper;
+    @include flex-layout(row,space-between,flex-start);
+    padding-top: 20px;
+    &-list {
+      @include flex-layout(column,space-between,flex-start);
+      &-text {
+        color: #999;
+        //去除下划线
+        text-decoration: none;
+        margin-bottom: 10px;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  &-copyRight {
+    @include main-wapper;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    padding: 30px 0;
+    color: #999;
+  }
+  
+}

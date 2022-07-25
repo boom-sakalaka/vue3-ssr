@@ -1,0 +1,102 @@
+.room {
+  margin-bottom: 20px;
+  &-carousel {
+    margin: 10px;
+    img{
+    border: 5 solid #f8f8f8;
+    }
+  }
+  &-detail {
+    @include main-wapper();
+    @include flex-layout(row, center, flex-start);
+    &-part {
+      width: 70%;
+      @include flex-layout(column, center, flex-start);
+      &-info {
+        @include flex-layout(row, space-between, center);
+        margin: 5px;
+        &-item {
+          margin: 0 10px;
+        }
+      }
+      &-tags {
+        @include flex-layout(row, space-between, flex-start);
+        margin: 5px;
+        .el-tag {
+          margin: 0 10px;
+        }
+      }
+      &-border {
+        margin: 6px 10px;
+        border: 1px solid #f1f1f1;
+        width: 100%;
+      }
+      &-landlord {
+        @include flex-layout(row, space-between, center);
+        margin: 0 10px;
+        &-img {
+          margin: 10px;
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+        }
+        &-info {
+          &-name {
+            font-weight: 800;
+          }
+          &-p {
+            margin-right: 5px;
+            color: #555;
+          }
+        }
+      }
+      &-introduce {
+        margin: 0 10px;
+        padding: 10px;
+        background: #f8f8f8;
+        font-family: $font-family-introduce;
+        font-weight: 400;
+        color: #555;;
+      }
+    }
+    &-form {
+      width: 30%;
+      margin: 20px 60px;
+      border: 1px solid #f1f1f1;
+      height: 230px;
+      &-price {
+        margin: 10px;
+        font-size: 22px;
+        color: rgb(72, 72, 72);
+      }
+      .el-form-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 10px 0px 10px;
+      }
+      &-itemNumber .el-form-item__content {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        select {
+          padding: 5px;
+          width: 240px;
+        }
+      }
+
+      &-item .el-form-item__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .el-button {
+          width: 200px;
+        }
+      }
+    }
+  }
+}

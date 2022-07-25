@@ -1,0 +1,14 @@
+/* 重置默认样式 */
+body,
+html,
+p {
+  padding: 0;
+  margin: 0;
+}
+body {
+  min-height: 100vh;
+}
+
+.container {
+  min-height: calc(100vh - 402px);
+}

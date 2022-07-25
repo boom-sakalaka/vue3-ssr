@@ -1,0 +1,48 @@
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  &-logo {
+    position: absolute;
+    height: auto;
+    width: 162px;
+    left: 15px;
+    z-index: 10;
+  }
+  &-menu {
+    width: inherit;
+    padding: 0 45px;
+    justify-content: right;
+    align-items: center;
+    height: 80px;
+    &-item {
+      position: relative;
+    }
+    .el-menu-item {
+      height: 80px;
+      font-size: 16px;
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+    &-sub {
+      font-size: 16px;
+      &-zh,
+      &-en {
+        font-size: 10px;
+      }
+    }
+    &-personal {
+      &-img {
+        background-color: rgb(242, 242, 242) !important;
+        box-shadow: rgb(235 235 235) 0px 0px 0px 2px !important;
+        border-radius: 50% !important;
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}

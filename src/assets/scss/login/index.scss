@@ -1,0 +1,101 @@
+.login {
+  @include flex-layout(row);
+  height: 100vh;
+  width: 100vw;
+  &-leftPart {
+    flex: 30;
+    height: 100%;
+    background: url("../../images/login/bg.png");
+    background-repeat: no-repeat;
+    background-position: 60% center;
+    background-size: cover;
+  }
+
+  &-rightPart {
+    @include flex-layout(row, center, center);
+    flex: 20;
+    &-panel {
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .el-input__wrapper {
+        border-radius: none !important;
+        ::after {
+          border-radius: none !important;
+        }
+      }
+      .el-tabs__header {
+        margin-bottom: 45px;
+      }
+      .el-tabs__nav-scroll {
+        width: 100%;
+        margin: 0 auto;
+        .el-tabs__nav {
+          float: initial;
+          text-align: center;
+        }
+      }
+      v-deep .el-form-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+      }
+      .el-form-item__content {
+        margin-left: 0px !important ;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+      }
+      .el-input__wrapper {
+        padding: 0 20px;
+        height: 44px;
+        line-height: 42px;
+        background: #f6f6f8;
+        border-radius: 40px;
+        border: none;
+      }
+      .el-tabs__nav-wrap::after {
+        display: none;
+      }
+      .el-tabs__item {
+        font-size: 24px;
+        color: #999;
+        &.is-active {
+          color: $orange;
+        }
+      }
+      .el-tabs__active-bar {
+        background-color: $orange;
+      }
+      .el-input {
+        width: 300px;
+      }
+      .el-form-item__error {
+        left: 15px;
+      }
+      .el-button {
+        border-radius: 10px;
+        border-color: none;
+        height: 44px;
+        border-radius: 20px;
+        width: 300px;
+        background-color: $orange;
+        &:hover , &:active{
+          border-color: $orange;
+        }
+
+      }
+      .el-button--primary {
+        border-color: none !important;
+        --el-button-border-color: $orange;
+        --el-button-hover-border-color: $orange;
+        --el-button-active-border-color: $orange;
+      }
+    }
+  }
+}

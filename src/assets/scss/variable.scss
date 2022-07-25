@@ -1,0 +1,38 @@
+// 文字省略效果
+@mixin line-text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text {
+  @include line-text-overflow;
+  width: 200px;
+}
+
+//主题基本样式
+@mixin main-wapper {
+  width: 1080px;
+  margin: 0 auto;
+}
+
+// flex布局
+@mixin flex-layout($dir: column, $justify: center, $algin: center) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $justify;
+  align-items: $algin;
+}
+
+// 多行文本超出行数显示省略号
+@mixin text-overflow($line: 1) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+  overflow: hidden;
+}
+
+$red: red;
+$orange: rgba(255, 81, 0, 0.842);
+
+$font-family-introduce:Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", PingFang-SC, "Hiragino Sans GB", 微软雅黑, "Microsoft YaHei", "Heiti SC", sans-serif !important;
