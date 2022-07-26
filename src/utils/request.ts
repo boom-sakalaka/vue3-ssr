@@ -66,10 +66,11 @@ function request(options: any) {
   }
 
   // 设置isMock,保持config.mock不被覆盖
-  let isMock = config.mock;
   if (typeof options.mock !== 'undefined') {
     config.mock = options.mock;
   }
+  let isMock = config.mock;
+
   // 如果是生产环境
   if (config.env === 'prod') {
     // 就将baseApi指向config.baseApi 线上地址
