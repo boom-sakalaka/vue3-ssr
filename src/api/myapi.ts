@@ -8,11 +8,12 @@ interface Ilist {
 }
 
 /* 获取用户信息 */
-export const getListInfo = (): Promise<Ilist> => {
+export const getListInfo = (data: any): Promise<Ilist> => {
   return request<Ilist>(
     {
       url: 'api/getList',
-      method: 'POST',
+      method: 'get',
+      data,
     },
     {
       isMock: true,

@@ -107,6 +107,13 @@ export type BaseResponse<T = any> = Promise<Response<T>>;
 export const request = async <T = any>(config: AxiosRequestConfig, options: RequestOptions = {}): Promise<T> => {
   try {
     const { successMsg, errorMsg, permCode, isMock, isGetDataDirectly = true } = options;
+
+    if (config.method && config.method.toLowerCase() === 'get') {
+      // 转换类型
+      config.params = config.data;
+      config.data = null;
+    }
+
     // 如果当前是需要鉴权的接口 并且没有权限的话 则终止请求发起
     // !useUserStore().perms.includes(permCode)
     if (permCode) {

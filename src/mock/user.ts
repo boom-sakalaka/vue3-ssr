@@ -31,7 +31,7 @@ const statusList = {
 export default [
   {
     url: '/mock/api/getList',
-    method: 'post',
+    method: 'get',
     response: () => {
       return logList;
     },
