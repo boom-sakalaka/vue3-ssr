@@ -1,13 +1,16 @@
 <script setup lang="ts">
-import { useRouter, useRoute } from 'vue-router';
-import { getListInfo } from '@/api/myapi';
+import { GLB_STATUS_ENUM } from '@/const';
+import { useRouter } from 'vue-router';
+
+console.warn(
+  GLB_STATUS_ENUM.getList({
+    format: (item: { text: any }) => ({
+      lable: item.text,
+    }),
+  })
+);
 
 const router = useRouter();
-const route = useRoute();
-
-const resutl = await getListInfo({ pages: 1, name: 2 });
-console.warn(resutl.list);
-console.log(route.query);
 </script>
 
 <template>
