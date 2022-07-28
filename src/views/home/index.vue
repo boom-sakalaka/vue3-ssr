@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 import useCurrentInstance from '@/utils/useCurrentInstance.js';
 
@@ -14,6 +15,10 @@ const { proxy } = useCurrentInstance();
 proxy!.$message('测试');
 
 console.log(route.params);
+
+const size = ref<'' | 'large' | 'small'>('large');
+
+const value1 = ref('');
 </script>
 
 <template>
@@ -29,6 +34,8 @@ console.log(route.params);
     >
       个人中心
     </el-button>
+
+    <el-date-picker v-model="value1" type="date" placeholder="Pick a day" :size="size" />
   </div>
 </template>
 
