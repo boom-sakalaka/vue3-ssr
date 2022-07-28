@@ -1,8 +1,12 @@
 <script setup lang="ts">
 import { useRouter, useRoute } from 'vue-router';
+import { getListInfo } from '@/api/myapi';
+
 const router = useRouter();
 const route = useRoute();
 
+const resutl = await getListInfo();
+console.warn(resutl.list);
 console.log(route.query);
 </script>
 

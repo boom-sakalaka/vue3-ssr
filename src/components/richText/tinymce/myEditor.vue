@@ -4,14 +4,13 @@
 </template>
 
 <script setup lang="ts">
-import tinymce from 'tinymce/tinymce';
-import { Editor } from 'tinymce/tinymce';
+import tinymce, { Editor } from 'tinymce/tinymce';
+
 import 'tinymce/skins/ui/oxide/skin.min.css'; //富文本样式
 import 'tinymce/icons/default'; //富文本样式
 // 把tinymce插件引入抽取为一个文件
 import { contentStyle } from './plugins';
 import { ref, watch, onMounted } from 'vue';
-// import { uploadFile } from '~/utils'
 
 const emit = defineEmits<{
   (e: 'update:modelValue', value: string): void;

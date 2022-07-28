@@ -32,6 +32,8 @@
     "unplugin-auto-import": "^0.10.1",
     "unplugin-vue-components": "^0.21.1",
     "vite": "^3.0.0",
-    "vue-tsc": "^0.38.4"
+    "vue-tsc": "^0.38.4",
+    "mockjs": "^1.1.0",
+    "vite-plugin-mock": "^2.9.6"
   }
 }
