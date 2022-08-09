@@ -3,10 +3,17 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
+  // 富文本封装使用
   {
     path: '/richText',
     name: 'componentsTest',
     component: () => import('@/views/richText/index.vue'),
+  },
+
+  {
+    path: '/message', // 封装 element 的elmessage
+    name: 'message',
+    component: () => import('@/views/message/index.vue'),
   },
 
   {
@@ -18,6 +25,7 @@ const routes = [
       keepAlive: false,
     },
   },
+
   {
     path: '/mine',
     name: 'mine',

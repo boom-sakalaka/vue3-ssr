@@ -19,11 +19,17 @@ const changLang = (language: any) => {
 
 <template>
   <el-config-provider :locale="locale">
-    <!-- {{ t('header.orders') }}
-    <button @click="changLang(zhCn)">中文</button>
-    <button @click="changLang(en)">英文</button> -->
     <router-link to="/richText">富文本样例</router-link>
     |
+    <router-link to="/message">Elmessage</router-link>
+    |
+
+    <hr />
+    <h3>国际化例子</h3>
+    {{ t('header.orders') }}
+    <button @click="changLang(zhCn)">中文</button>
+    <button @click="changLang(en)">英文</button>
+
     <router-view></router-view>
   </el-config-provider>
 </template>

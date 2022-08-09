@@ -8,7 +8,7 @@ export const GLB_STATUS_ENUM = new ENUM([
     text: '启用',
   },
   {
-    key: 'DISABLED',
+    key: 'DISABLED',           
     value: 0,
     text: '禁用',
   },
