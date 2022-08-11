@@ -17,6 +17,12 @@ const routes = [
   },
 
   {
+    path: '/formModel', // 封装 element form 表单
+    name: 'formModel',
+    component: () => import('@/views/formModel/index.vue'),
+  },
+
+  {
     path: '/home',
     name: 'home',
     component: () => import('@/views/home/index.vue'),

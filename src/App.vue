@@ -23,14 +23,15 @@ const changLang = (language: any) => {
     |
     <router-link to="/message">Elmessage</router-link>
     |
-
+    <router-link to="/formModel">表单form封装</router-link>
+    |
+    <router-view></router-view>
     <hr />
+
     <h3>国际化例子</h3>
     {{ t('header.orders') }}
     <button @click="changLang(zhCn)">中文</button>
     <button @click="changLang(en)">英文</button>
-
-    <router-view></router-view>
   </el-config-provider>
 </template>
 
@@ -45,5 +46,9 @@ const changLang = (language: any) => {
 }
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
+}
+
+.router-link-active {
+  color: red;
 }
 </style>
