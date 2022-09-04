@@ -2,6 +2,7 @@
 import { ref } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 import IndexedDB from '@/utils/indexedDB';
+import { fetchElephant, addDB } from '@/api';
 
 const router = useRouter();
 const route = useRoute();
@@ -10,8 +11,19 @@ console.log(route.params);
 const size = ref<'' | 'large' | 'small'>('large');
 const value1 = ref('');
 
-const airbnbDB = new IndexedDB('airbnb');
-airbnbDB.openStore('elephant', 'id', ['nose', 'ear']);
+// const airbnbDB = new IndexedDB('airbnb');
+// airbnbDB.openStore('elephant', 'id', ['nose', 'ear']);
+
+// function addDB() {
+//   airbnbDB.updateItem('elephant', {
+//     nose: '33m',
+//     ear: '大',
+//   });
+// }
+
+function getElephant() {
+  fetchElephant();
+}
 </script>
 
 <template>
@@ -29,6 +41,9 @@ airbnbDB.openStore('elephant', 'id', ['nose', 'ear']);
     </el-button>
 
     <el-date-picker v-model="value1" type="date" placeholder="Pick a day" :size="size" />
+
+    <el-button type="default" @click="addDB">增加</el-button>
+    <el-button type="default" @click="getElephant">查找</el-button>
   </div>
 </template>
 
